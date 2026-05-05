@@ -321,6 +321,144 @@
       50%       { transform: translateX(-50%) translateY(6px); }
     }
 
+    /* ── RESPONSIVE HERO ── */
+    @media (max-width: 1024px) {
+      .hero-logo-wrap {
+        right: 3%;
+        top: 55%;
+      }
+
+      .hero-logo-circle {
+        width: 240px;
+        height: 240px;
+      }
+
+      .hero-content {
+        max-width: 65%;
+      }
+
+      .section-inner {
+        padding: 0 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        min-height: auto;
+        padding: 120px 0 60px 0;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .hero-logo-wrap {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        order: 2;
+        animation: fadeIn 1.2s 0.8s both;
+      }
+
+      .hero-logo-circle {
+        width: 200px;
+        height: 200px;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        padding: 0 1.5rem;
+        text-align: center;
+        order: 1;
+        z-index: 2;
+      }
+
+      .hero-tag {
+        justify-content: center;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        max-width: 100%;
+        font-size: 0.95rem;
+        margin-bottom: 1.8rem;
+      }
+
+      .hero-btns {
+        justify-content: center;
+        gap: 0.8rem;
+      }
+
+      .btn-primary,
+      .btn-ghost {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.75rem;
+      }
+
+      .hero-scroll {
+        display: none;
+      }
+
+      .section-inner {
+        padding: 0 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 100px 0 40px 0;
+      }
+
+      .hero-logo-wrap {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-logo-circle {
+        width: 160px;
+        height: 160px;
+      }
+
+      .hero-content {
+        padding: 0 1rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        margin-bottom: 0.8rem;
+      }
+
+      .hero p {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .btn-primary,
+      .btn-ghost {
+        width: 100%;
+        padding: 0.9rem 1.2rem;
+        text-align: center;
+        font-size: 0.7rem;
+      }
+
+      .section-inner {
+        padding: 0 1rem;
+      }
+    }
+
     /* ── SECTION WRAPPER ── */
     section { position: relative; }
 
