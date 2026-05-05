@@ -3061,9 +3061,12 @@ function showTab(tab) {
      target="_blank" 
      rel="noopener noreferrer"
      title="Contáctanos por WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.471 16.624l-2.352-.12c-.402-.02-.788.088-1.074.303l-1.703 1.216a10.986 10.986 0 01-5.444-5.444l1.216-1.703c.215-.286.323-.672.303-1.074l-.12-2.352a1.084 1.084 0 00-1.078-.989H5.532a1.084 1.084 0 00-1.078 1.191c.59 6.28 5.756 11.446 12.036 12.036a1.084 1.084 0 001.191-1.078v-1.622a1.084 1.084 0 00-.99-1.078z" fill="white"/>
-    </svg>
+    <div class="whatsapp-content">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="whatsapp-icon">
+        <path d="M17.471 16.624l-2.352-.12c-.402-.02-.788.088-1.074.303l-1.703 1.216a10.986 10.986 0 01-5.444-5.444l1.216-1.703c.215-.286.323-.672.303-1.074l-.12-2.352a1.084 1.084 0 00-1.078-.989H5.532a1.084 1.084 0 00-1.078 1.191c.59 6.28 5.756 11.446 12.036 12.036a1.084 1.084 0 001.191-1.078v-1.622a1.084 1.084 0 00-.99-1.078z" fill="white"/>
+      </svg>
+      <span class="whatsapp-text">Conecta con nosotros</span>
+    </div>
   </a>
 
   <style>
@@ -3071,10 +3074,8 @@ function showTab(tab) {
       position: fixed;
       bottom: 30px;
       right: 30px;
-      width: 60px;
-      height: 60px;
       background-color: #25D366;
-      border-radius: 50%;
+      border-radius: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -3082,31 +3083,64 @@ function showTab(tab) {
       z-index: 999;
       transition: all 0.3s ease;
       text-decoration: none;
+      padding: 12px 20px;
+      min-width: fit-content;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .whatsapp-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .whatsapp-icon {
+      width: 28px;
+      height: 28px;
+      fill: white;
+      flex-shrink: 0;
+    }
+
+    .whatsapp-text {
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      white-space: nowrap;
     }
 
     .whatsapp-float:hover {
       background-color: #20ba5a;
-      transform: scale(1.1);
+      transform: scale(1.05);
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-    }
-
-    .whatsapp-float svg {
-      width: 32px;
-      height: 32px;
-      fill: white;
     }
 
     @media (max-width: 768px) {
       .whatsapp-float {
         bottom: 20px;
         right: 20px;
-        width: 55px;
-        height: 55px;
+        padding: 10px 16px;
       }
 
-      .whatsapp-float svg {
-        width: 28px;
-        height: 28px;
+      .whatsapp-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      .whatsapp-text {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 14px;
+      }
+
+      .whatsapp-text {
+        font-size: 11px;
       }
     }
   </style>
